@@ -14,7 +14,7 @@ var checkForMatch = function() {
     }
 };
 
-// Function with logic related to flipping over a card and displaying result.
+// Function related to flipping over a card and displaying result.
 var flipCard = function(cardId) {
     var cardOne = cards[0];
     var cardTwo = cards[2];
