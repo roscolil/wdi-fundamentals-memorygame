@@ -1,5 +1,5 @@
 // wdi-fundamentals-memorygame
-// Developed by Ross Lillis
+// Developed by Ross Lillis.
 
 
 var cards = [
@@ -27,6 +27,8 @@ var cards = [
 
 var cardsInPlay = [];
 
+// Checks for a match between the 2 chosen cards and displays 
+// the appropriate message.
 var checkForMatch = function() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert("You found a match!");
@@ -36,6 +38,9 @@ var checkForMatch = function() {
   }
 };
 
+// Assigns attribute to cardId variable and logs message to console 
+// while adding this value to cardsInPlay array. If two cards are played
+// it calls the checkForMatch function.
 var flipCard = function() {
   var cardId = this.getAttribute('data-id');
 
@@ -49,9 +54,10 @@ var flipCard = function() {
   if (cardsInPlay.length === 2) {
     checkForMatch();
   }
-
 };
 
+// On click, calls flipCard function and creates image elements for 
+// the length of the cards array.
 var createBoard = function() {
 
   for (var i = 0; i < cards.length; i++) {
@@ -65,6 +71,7 @@ var createBoard = function() {
   }
 };
 
+//Calling main function.
 createBoard(); 
 
 
