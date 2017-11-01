@@ -76,6 +76,22 @@ p {
 	line-height: 26px;
 }
 
+div {
+	font-family: "Raleway", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: center;
+}
+
+span {
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+	padding: 10px;
+	text-align: center;
+}
 p a {
 
 	display: inline-block;
@@ -113,27 +129,21 @@ br {
 	visibility: hidden;
 }
 
+/* css for reset button */
 #button {
-  padding-top: 50px;
+  padding-top: 40px;
   text-align: center;
 }
 
-/* start da css for da buttons */
 .btn {
   border-radius: 8px;
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-size: 16px;
   text-decoration: none;
-  margin: 12px;
-  color: #fff;
+  margin: 8px;
+  color: #FFFFFF;
   position: relative;
   display: inline-block;
-}
-
-.btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
 }
 
 .orange {
