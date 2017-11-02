@@ -91,21 +91,15 @@ var lossScore = function() {
   document.getElementById('losses').innerHTML = losses;
 };
 
-// Onclick event resets game board images.
+// Click event resets game board images.
 
   var resetBoard = function() {
-    alert("It works!!");
-/* Tried using this code within the function to see if there is a way 
-to reset the game board without reloading the page (and losing the score). 
-Not sure if i'm on the right track here. */
     
-//    var gameBoard = document.getElementById('game-board');
-//    var child = document.getElementsByTagName('img');
-//    gameBoard.removeChild(child);
 };
 
 //Calling main function.
-createBoard(); 
+createBoard();
 
+// Call resetBoard function when button clicked.
 var resetButton = document.querySelector('button');
-button.addEventListener('click', resetBoard);
+resetButton.addEventListener('click', resetBoard);
