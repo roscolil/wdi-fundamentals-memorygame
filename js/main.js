@@ -1,7 +1,6 @@
 // wdi-fundamentals-memorygame
 // Developed by Ross Lillis for GA.
 
-
 var cards = [
   {
     rank: "queen",
@@ -65,9 +64,7 @@ var flipCard = function() {
    the length of the cards array. */
 
 var createBoard = function() {
-
   for (var i = 0; i < cards.length; i++) {
-
     var cardElement = document.createElement('img');
 
     cardElement.setAttribute('src', 'images/back.png');
@@ -94,12 +91,23 @@ var lossScore = function() {
 // Click event resets game board images.
 
   var resetBoard = function() {
-    
-};
+    for (var i = 0; i < cards.length; i++) {
+      var resetImage = document.querySelector('img');
 
-//Calling main function.
+      resetImage.setAttribute('src', 'images/back.png');
+      resetImage.setAttribute('data-id', i);
+      //Things[i]
+    }
+    
+
+};  
+
+//Calling first function.
+
 createBoard();
 
 // Call resetBoard function when button clicked.
+
 var resetButton = document.querySelector('button');
 resetButton.addEventListener('click', resetBoard);
+

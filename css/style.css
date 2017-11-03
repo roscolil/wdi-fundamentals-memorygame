@@ -146,6 +146,10 @@ br {
   display: inline-block;
 }
 
+.btn:focus {
+	outline:0;
+}
+
 .orange {
   background-color: #F15B31;
 }
