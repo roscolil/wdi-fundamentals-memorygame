@@ -33,11 +33,11 @@ var cardsInPlay = [];
 var checkForMatch = function() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert("You found a match!");
-    winScore();
+    winCount();
   }
   else {
     alert("Sorry, try again.");
-    lossScore();
+    lossCount();
   }
 };
 
@@ -76,13 +76,13 @@ var createBoard = function() {
 
 // Win/loss score counters.
 
-var winScore = function() {
+var winCount = function() {
   var wins = 0;
   wins += 1;
   document.getElementById('wins').innerHTML = wins;
 };
 
-var lossScore = function() {
+var lossCount = function() {
   var losses = 0;
   losses += 1;
   document.getElementById('losses').innerHTML = losses;
@@ -91,15 +91,16 @@ var lossScore = function() {
 // Click event resets game board images.
 
   var resetBoard = function() {
+    location.reload();  //Unfortunately this resets the score as well.
+    
+    /* Am i on the right track here?
     for (var i = 0; i < cards.length; i++) {
-      var resetImage = document.querySelector('img');
+      var resetImage = document.getElementById('game-board').childNodes;
 
       resetImage.setAttribute('src', 'images/back.png');
       resetImage.setAttribute('data-id', i);
-      //Things[i]
     }
-    
-
+    */
 };  
 
 //Calling first function.
