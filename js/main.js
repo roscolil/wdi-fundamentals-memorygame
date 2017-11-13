@@ -100,11 +100,10 @@ var lossCount = function() {
 
       resetImage.setAttribute('src', 'images/back.png');
       resetImage.setAttribute('data-id', i);
-    }
-    
+    } 
 };  
 
-//Calling first function.
+//Calling main function.
 
 createBoard();
 
