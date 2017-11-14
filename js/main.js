@@ -27,7 +27,6 @@ var cards = [
 
 var cardsInPlay = [];
 
-
 /* Checks for a match between the 2 chosen cards and displays 
    the appropriate message. */
 
@@ -92,13 +91,12 @@ var lossCount = function() {
 // Click event resets game board images.
 
   var resetBoard = function() {
-    
-    // Am i on the right track here? The images reset however
-    // so do the win/loss counters.
+    var resetImage = document.getElementById('game-board');
+    // Am i on the right track here? Images aren't resetting and
+    // if i take the easy way out and just reload the page then my 
+    // counters reset as well...
     for (var i = 0; i < cards.length; i++) {
-      var resetImage = document.getElementById('game-board').childNodes;
-
-      resetImage.setAttribute('src', 'images/back.png');
+      resetImage[i].setAttribute('src', 'images/back.png').childNodes;
       resetImage.setAttribute('data-id', i);
     } 
 };  
